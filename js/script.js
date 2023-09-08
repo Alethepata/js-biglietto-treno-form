@@ -13,12 +13,27 @@ const bottone1 = document.getElementById('btn-1');
 const inputName = document.getElementById('input-name');
 const inputKm = document.getElementById('input-km');
 const inputAge = document.getElementById('input-age');
-const nome = inputName.value;
+const name = inputName.value;
 const km = inputKm.value;
+const costoKm = km * 0.21;
 const age = inputAge.value;
+const scontoMinorenni = (costoKm * 20) / 100;
+const scontoOver = (costoKm * 40) / 100;
+let carrozza;
+let cp;
+const min=10000;
+const max=99999;
+
+
+carrozza= Math.floor(Math.random () *10);
+cp= Math.floor(Math.random () * (max - min + 1) + min);
+
 
 bottone1.addEventListener('click', function(){
-    document.querySelector('.nome').innerHTML = "Ciao " + nome;
-    document.querySelector('.km').innerHTML = "Km " + km;
-    document.querySelector('.age').innerHTML = age;
+    // document.querySelector('.offerta').innerHTML =;
+    document.querySelector('.carrozza').innerHTML = carrozza;
+    document.querySelector('.codice').innerHTML = cp;
+    document.querySelector('.costo').innerHTML = km;
 });
+
+
