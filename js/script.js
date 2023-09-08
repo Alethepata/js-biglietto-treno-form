@@ -8,3 +8,12 @@
 7. Al click del bottone "genera" aggiungo la classe active alla "2° row - Il tuo biglietto ".
 8. Al click del bottone "annulla" rimuovo la classe active alla "2° row - Il tuo biglietto ".
 */ 
+
+const bottone1 = document.getElementById('btn-1');
+const inputName = document.getElementById('input-name');
+
+
+bottone1.addEventListener('click', function(){
+    const nome = inputName.value;
+    document.querySelector('.nome').innerHTML = "Ciao " + nome;
+});
