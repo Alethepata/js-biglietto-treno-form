@@ -11,9 +11,11 @@
 
 const bottone1 = document.getElementById('btn-1');
 const inputName = document.getElementById('input-name');
-
+const inputKm = document.getElementById('input-km');
+const nome = inputName.value;
+const km = inputKm.value;
 
 bottone1.addEventListener('click', function(){
-    const nome = inputName.value;
     document.querySelector('.nome').innerHTML = "Ciao " + nome;
+    document.querySelector('.km').innerHTML = "Km " + km;
 });
