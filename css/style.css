@@ -1,0 +1,6 @@
+.biglietto{
+    display: none;
+}
+.active{
+    display: flex;
+}
