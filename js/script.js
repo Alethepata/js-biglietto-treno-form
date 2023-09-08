@@ -13,6 +13,7 @@ const bottone1 = document.getElementById('btn-1');
 const inputName = document.getElementById('input-name');
 const inputKm = document.getElementById('input-km');
 const inputAge = document.getElementById('input-age');
+const biglietto= document.querySelector('.biglietto');
 const name = inputName.value;
 const km = inputKm.value;
 const costoKm = km * 0.21;
@@ -25,15 +26,19 @@ const min=10000;
 const max=99999;
 
 
+
 carrozza= Math.floor(Math.random () *10);
 cp= Math.floor(Math.random () * (max - min + 1) + min);
 
 
+document.querySelector('.nome').innerHTML =name;
+// document.querySelector('.offerta').innerHTML =;
+document.querySelector('.carrozza').innerHTML = carrozza;
+document.querySelector('.codice').innerHTML = cp;
+document.querySelector('.costo').innerHTML = km;
+
 bottone1.addEventListener('click', function(){
-    // document.querySelector('.offerta').innerHTML =;
-    document.querySelector('.carrozza').innerHTML = carrozza;
-    document.querySelector('.codice').innerHTML = cp;
-    document.querySelector('.costo').innerHTML = km;
+    biglietto.classList.add('active');
 });
 
 
