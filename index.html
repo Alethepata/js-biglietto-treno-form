@@ -8,36 +8,42 @@
     <title>Biglietto treno</title>
 </head>
 <body>
-    <h1 class="text-center  text-uppercase ">calcola il prezzo tuo biglietto </h1>
-    <div class="container">
-        <div class="row content">
-            <form action="">
+
+    <div class="container container_custom">
+        <h1 class="text-center  text-uppercase my-5 text-light">
+        calcola il prezzo del tuo biglietto 
+        </h1>
+        <form action="">
+            <div class="row content">
                 <div class="col">
                     <div class="name_surname">
-                        <input type="text" class="form-control" id="input-name">
+                        <input type="text" class="form-control bg-body-secondary" id="input-name" placeholder="Nome e Cognome">
                     </div>
                 </div>
                 <div class="col">
                     <div id="km">
-                        <input type="text" class="form-control" id="input-km">
+                        <input type="text" class="form-control bg-body-secondary" id="input-km" placeholder="Km">
                     </div>
                 </div>
                 <div class="col">
                     <div id="age">
-                        <select class="form-select" id="input-age">
+                        <select class="form-select bg-body-secondary" id="input-age">
                             <option value="Maggiorenne">Maggiorenne</option>
                             <option value="Minorenne">Minorenne</option>
                             <option value="Over 65">Over 65</option>
                           </select>
                     </div>
                 </div>
-                <button  type="button" id="btn-1" class="btn btn-primary ">Conferma</button>
-                <button type="reset" id="btn-2" class="btn btn-danger ">Elimina</button>
-            </form>
-        </div>
+                <div class="col-12 text-center my-5">
+                    <button  type="button" id="btn-1" class="btn btn-primary">Conferma</button>
+                    <button type="reset" id="btn-2" class="btn btn-danger">Elimina</button>
+                </div>
+            </div>
+        </form>
 
         <div class="row biglietto">
             <div class="col-3">
+                <h3>Nome e Cognome</h3>
                 <h1 class="nome"></h1>
             </div>
             <div class="col">
