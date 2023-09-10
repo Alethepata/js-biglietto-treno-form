@@ -2,7 +2,7 @@ body{
     background-image: url(https://wips.plug.it/cips/initalia.virgilio.it/cms/2023/07/treni.jpg);
     background-size: cover;
 }
-.container_custom{
+.bg_custom{
     background-color: rgba(0, 0, 0, 0.5);
 }
 .biglietto{
@@ -10,4 +10,12 @@ body{
 }
 .active{
     display: flex;
+}
+.orange{
+    height: 45px;
+}
+img{
+    height: 40px;
+    transform: rotate(90deg);
+
 }
