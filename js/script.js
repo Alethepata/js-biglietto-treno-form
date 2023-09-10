@@ -25,6 +25,7 @@ const scontoOver = (costoKm * 40) / 100;
 let carrozza;
 let cp;
 let message;
+let offerta;
 const min=10000;
 const max=99999;
 
@@ -35,16 +36,19 @@ cp= Math.floor(Math.random () * (max - min + 1) + min);
  if(age == "Minorenne"){
      const prezzoFinale = costoKm - scontoMinorenni;
      message= prezzoFinale.toFixed(2)+ ' Euro ';
+     offerta= 'Biglietto junior';
  }else if(age == "Over 65"){
      const prezzoFinale = costoKm - scontoOver;
      message=prezzoFinale.toFixed(2) + ' Euro ';
+     offerta= 'Biglietto senior';
  } else{
      const prezzoFinale = costoKm.toFixed(2);
      message= prezzoFinale + ' Euro ';
+     offerta= 'Biglietto standard';
  }
 
 document.querySelector('.nome').innerHTML =name;
-document.querySelector('.offerta').innerHTML =age;
+document.querySelector('.offerta').innerHTML =offerta;
 document.querySelector('.carrozza').innerHTML = carrozza;
 document.querySelector('.codice').innerHTML = cp;
 document.querySelector('.costo').innerHTML = message;
