@@ -10,14 +10,14 @@
 */ 
 
 const bottone1 = document.getElementById('btn-1');
+const bottone2 = document.getElementById('btn-2');
 const inputName = document.getElementById('input-name');
 const inputKm = document.getElementById('input-km');
 const inputAge = document.getElementById('input-age');
 const biglietto= document.querySelector('.biglietto');
+const contenuto= document.querySelector('.content');
 let name = inputName.value;
-name = inputName.value;
-let km = 0;
-km = inputKm.value;
+let km = inputKm.value;
 const costoKm = km * 0.21;
 let age = inputAge.value;
 const scontoMinorenni = (costoKm * 20) / 100;
@@ -55,6 +55,12 @@ document.querySelector('.costo').innerHTML = message;
 
 bottone1.addEventListener('click', function(){
     biglietto.classList.add('active');
+});
+bottone2.addEventListener('click', function(){
+    biglietto.classList.remove('active');
+    
+    
+    
 });
 
 
