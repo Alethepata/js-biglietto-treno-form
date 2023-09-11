@@ -16,46 +16,48 @@ const inputKm = document.getElementById('input-km');
 const inputAge = document.getElementById('input-age');
 const biglietto= document.querySelector('.biglietto');
 const contenuto= document.querySelector('.content');
-let name = inputName.value;
-let km = inputKm.value;
-const costoKm = km * 0.21;
-let age = inputAge.value;
-const scontoMinorenni = (costoKm * 20) / 100;
-const scontoOver = (costoKm * 40) / 100;
-let carrozza;
-let cp;
-let message;
-let offerta;
-const min=10000;
-const max=99999;
-
-carrozza= Math.floor(Math.random () *10);
-cp= Math.floor(Math.random () * (max - min + 1) + min);
-
-
- if(age == "Minorenne"){
-     const prezzoFinale = costoKm - scontoMinorenni;
-     message= prezzoFinale.toFixed(2)+ ' Euro ';
-     offerta= 'Biglietto junior';
- }else if(age == "Over 65"){
-     const prezzoFinale = costoKm - scontoOver;
-     message=prezzoFinale.toFixed(2) + ' Euro ';
-     offerta= 'Biglietto senior';
- } else{
-     const prezzoFinale = costoKm.toFixed(2);
-     message= prezzoFinale + ' Euro ';
-     offerta= 'Biglietto standard';
- }
-
-document.querySelector('.nome').innerHTML =name;
-document.querySelector('.offerta').innerHTML =offerta;
-document.querySelector('.carrozza').innerHTML = carrozza;
-document.querySelector('.codice').innerHTML = cp;
-document.querySelector('.costo').innerHTML = message;
 
 bottone1.addEventListener('click', function(){
+
     biglietto.classList.add('active');
+    const name = inputName.value;
+    const km = inputKm.value;
+    const costoKm = km * 0.21;
+    const age = inputAge.value;
+    const scontoMinorenni = (costoKm * 20) / 100;
+    const scontoOver = (costoKm * 40) / 100;
+    let carrozza;
+    let cp;
+    let message;
+    let offerta;
+    const min=10000;
+    const max=99999;
+
+    carrozza= Math.ceil(Math.random () *10);
+    cp= Math.floor(Math.random () * (max - min + 1) + min);
+
+    if(age == "Minorenne"){
+        const prezzoFinale = costoKm - scontoMinorenni;
+        message= prezzoFinale.toFixed(2)+ ' Euro ';
+        offerta= 'Biglietto junior';
+    }else if(age == "Over 65"){
+        const prezzoFinale = costoKm - scontoOver;
+        message=prezzoFinale.toFixed(2) + ' Euro ';
+        offerta= 'Biglietto senior';
+    } else{
+        const prezzoFinale = costoKm.toFixed(2);
+        message= prezzoFinale + ' Euro ';
+        offerta= 'Biglietto standard';
+    }
+
+    document.querySelector('.nome').innerHTML =name;
+    document.querySelector('.offerta').innerHTML =offerta;
+    document.querySelector('.carrozza').innerHTML = carrozza;
+    document.querySelector('.codice').innerHTML = cp;
+    document.querySelector('.costo').innerHTML = message;
+   
 });
+
 bottone2.addEventListener('click', function(){
     biglietto.classList.remove('active');
     
